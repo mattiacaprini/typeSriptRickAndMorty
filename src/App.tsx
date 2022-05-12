@@ -1,9 +1,13 @@
 import "./App.css";
-import React from "react";
 import Character from "./components/character/character/character";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import axios from "axios";
+import React from "react";
+import Layout from "./containers/layout";
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 type AppProps = {
   result: string;
