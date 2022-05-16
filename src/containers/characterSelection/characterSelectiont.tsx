@@ -6,7 +6,7 @@ import React from "react";
 import DescriptionForm from "../../components/descriptionForm/descriptionForm";
 import { useParams } from "react-router-dom";
 
-type CharacterType = {
+type Charactertype = {
   //per un array con piu elementi di tipi diversi che poi gli passo sotto
   image: string;
   name: string;
@@ -32,7 +32,7 @@ type CharacterSelectionState = {
   locaNumber: number;
   episodes: number;
   characterNumber: number;
-  character: CharacterType | undefined;
+  character: Charactertype | undefined;
   idUrl: string;
   // charactedSelected: Character[];
 };
@@ -69,8 +69,6 @@ class CharacterSelection extends React.Component<
         "https://rickandmortyapi.com/api/character/" + this.state.idUrl;
 
       axios.get(requestUrl).then((result: any) => {
-        console.log("result.data = ", result.data);
-
         this.setState({
           character: result.data,
         });

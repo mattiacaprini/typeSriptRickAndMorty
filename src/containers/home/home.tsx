@@ -34,7 +34,7 @@ class Home extends React.Component<{}, HomeState> {
 
   componentDidMount() {
     axios
-      .get("https://rickandmortyapi.com/api/character/?page=5")
+      .get("https://rickandmortyapi.com/api/character/?page=15")
       .then((result: any) => {
         this.setState({
           characters: result.data.results,

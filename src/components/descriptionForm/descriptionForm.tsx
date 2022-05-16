@@ -8,10 +8,10 @@ import unknown from "../../img/unknown.png";
 interface DescriptionFormProps {
   image: string;
   name: string;
+  type: string;
   id: number;
   status: string;
   species: string;
-  type: string;
   gender: string;
 }
 
