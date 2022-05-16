@@ -26,5 +26,13 @@
 .title_txt{
     padding: 1rem;
     flex: 1;
+}
+
+.title_txt a{
+    text-decoration: none;
     color: rgb(245, 245, 245);
+}
+
+.title_txt a:hover{
+    color: orange
 }

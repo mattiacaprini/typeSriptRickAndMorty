@@ -6,18 +6,20 @@ function Header() {
     <div className="headerSite">
       <div className="insideHeaderUp">
         <div className="container_logo">
-          <img className="img_logo" src={logo} alt="logo" />
+          <a href="/">
+            <img className="img_logo" src={logo} alt="logo" />
+          </a>
         </div>
 
         <div className="menu">
           <p>
-            <span>docs</span>
+            <a href="/docs">docs</a>
           </p>
           <p>
-            <span>about</span>
+            <a href="/about">about</a>
           </p>
           <p className="support_us">
-            <span>support us</span>
+            <a href="/support_us">support us</a>
           </p>
         </div>
       </div>

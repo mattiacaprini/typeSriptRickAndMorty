@@ -1,96 +1,29 @@
 import "./App.css";
-import Character from "./components/character/character/character";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import axios from "axios";
 import React from "react";
-import Layout from "./containers/layout";
-
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./containers/home/home";
+import CharacterSelection from "./containers/characterSelection/characterSelectiont";
 
-type AppProps = {
-  result: string;
-  characters: string;
-};
-
-type Character = {
-  //per un array con piu elementi di tipi diversi che poi gli passo sotto
-  image: string;
-  name: string;
-  type: string;
-};
-
-type AppState = {
-  characters: Character[];
-  locaNumber: number;
-  episodes: number;
-  characterNumber: number;
-};
-
-class App extends React.Component<AppProps, AppState> {
+class App extends React.Component {
   //sempre questi due parametri
-  constructor(props: AppProps) {
-    super(props);
-    this.state = {
-      characters: [],
-      locaNumber: 0,
-      episodes: 0,
-      characterNumber: 0,
-    };
-  }
-
-  componentDidMount() {
-    axios
-      .get("https://rickandmortyapi.com/api/character")
-      .then((result: any) => {
-        this.setState({
-          characters: result.data.results,
-          characterNumber: result.data.info.count,
-        });
-      });
-    axios
-      .get("https://rickandmortyapi.com/api/location")
-      .then((result: any) => {
-        this.setState({
-          locaNumber: result.data.info.count,
-        });
-      });
-    axios.get("https://rickandmortyapi.com/api/episode").then((result: any) => {
-      this.setState({
-        episodes: result.data.info.count,
-      });
-    });
-  }
 
   render() {
-    console.log(this.state.characters);
-
-    const index = Math.round(Math.random() * 14);
-    const selectedCharacter = this.state.characters.slice(index, index + 6);
     return (
-      <div>
-        <Header />
-
-        <div className="figure">
-          <div className="containerImg">
-            {selectedCharacter.map((character, i) => (
-              <Character
-                key={i}
-                image={character.image}
-                name={character.name}
-                type={character.type}
-              />
-            ))}
-          </div>
-        </div>
-
-        <Footer
-          charNumber={this.state.characterNumber}
-          locaNumber={this.state.locaNumber}
-          episNumber={this.state.episodes}
-        />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* path dove vado (nei pulsanti devo chiamare con lo stesso nome la herfm in element gli
+            dico in quale mio file voglio andare. Per far funzionare un pulsante, gli do semplicemente la stesas path dichiarata qui. Quindi
+            io dichiaro un oath comune che posso raggiungere dando la stessa path a cui voglio arrivare al click di un lik) */}
+          <Route path="/character/:id" element={<CharacterSelection />} />
+          {/* <Route index element={<Home result={""} characters={""} />} /> */}
+          {/* <Route path="teams" element={<Teams />}>
+              <Route index element={<LeagueStandings />} />
+              <Route path=":teamId" element={<Team />} />
+              <Route path="new" element={<NewTeamForm />} />
+            </Route> */}
+        </Routes>
+      </BrowserRouter>
     );
   }
 }
