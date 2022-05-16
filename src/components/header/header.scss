@@ -1,0 +1,77 @@
+$container-dimension: 50px;
+$min-padding-margin: 1rem;
+$dimesionePiena: 100%;
+$height: calc(55vh - 60px);
+
+.headerSite {
+  background-image: url("../../img/sfondo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $min-padding-margin * 43.5 ;
+
+  background-color: white;
+  height: $height
+}
+
+.insideHeaderUp {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: space-between;
+}
+
+.container_logo {
+  margin-left: $min-padding-margin;
+  width: $container-dimension;
+  height: $container-dimension;
+}
+
+.img_logo {
+  width: $dimesionePiena;
+  height: $dimesionePiena;
+}
+
+.menu {
+  margin-right: $min-padding-margin;
+
+  p{
+    display: inline-block;
+    margin: $min-padding-margin * 0.4 ;  
+
+    a{
+      display: block;
+      text-decoration: none;
+      /*sottolineatura: no*/
+      color: black;
+      padding: $min-padding-margin * 0.5;
+      font-size: large;
+
+      &:hover{
+        color: orange;
+      }
+    }
+  }
+}
+
+.support_us {
+  border: 2px solid orange;
+  border-radius: $min-padding-margin * 0.5;
+}
+
+.title {
+  text-align: center;
+  font-size: $min-padding-margin * 3.3 ;
+
+  h1{
+    z-index: 1;
+  }
+}
+
+/* 
+  .support_us:hover{
+    background-color: orange;
+  }
+
+  .support_us a:hover{
+    color: white
+  } 
+*/

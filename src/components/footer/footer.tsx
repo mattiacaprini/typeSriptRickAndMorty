@@ -1,5 +1,4 @@
-import "./footer.css";
-
+import "./footer.scss";
 interface FooterProps {
   charNumber: number;
   locaNumber: number;

@@ -1,20 +1,24 @@
+$padding: 5rem;
+$min-height: calc(50vh - 60px);
+$pienaDimensione: 100%;
+
 .figure{  
-    background-color: rgb(36, 40, 47);
-    height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    min-height: calc(50vh - 60px);
-  }
+  background-color: rgb(36, 40, 47);
+  height: auto;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  min-height: $min-height;
+}
   
-  .containerImg{
-    height: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+.containerImg{
+  height: $pienaDimensione;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
   
   /*
   .App-logo {

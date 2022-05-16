@@ -1,0 +1,10 @@
+$padding: 5rem;
+$min-height: calc(50vh - 60px);
+
+.characterInformation{
+    background-color: rgb(36, 40, 47);
+    height: auto;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    min-height: $min-height;
+}

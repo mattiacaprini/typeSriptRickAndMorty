@@ -1,4 +1,4 @@
-import "../characterSelection/characterSelection.css";
+import "../characterSelection/characterSelection.scss";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import axios from "axios";

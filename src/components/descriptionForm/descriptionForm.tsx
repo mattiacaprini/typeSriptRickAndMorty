@@ -1,4 +1,4 @@
-import "../descriptionForm/descriptionForm.css";
+import "../descriptionForm/descriptionForm.scss";
 import ImgMaschio from "../../img/mas.png";
 import ImgFemmina from "../../img/fem.png";
 import Dead from "../../img/Dead.png";

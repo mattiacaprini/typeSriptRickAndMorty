@@ -1,0 +1,22 @@
+$footer-height: 25rem;
+$rgbColor: 158;
+
+.footer {
+  background-color: rgb(32, 35, 41);
+  height: $footer-height;
+  min-height: calc(120px);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt_footer {
+  text-align: center;
+  color: rgb($rgbColor, $rgbColor, $rgbColor);
+
+  p{
+    display: inline-block;
+    margin: $footer-height / 35.7;
+  }
+}

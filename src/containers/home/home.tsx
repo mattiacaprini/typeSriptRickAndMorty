@@ -1,4 +1,4 @@
-import "./home.css";
+import "./home.scss";
 import Character from "../../components/character/character/character";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -34,7 +34,7 @@ class Home extends React.Component<{}, HomeState> {
 
   componentDidMount() {
     axios
-      .get("https://rickandmortyapi.com/api/character/?page=15")
+      .get("https://rickandmortyapi.com/api/character/?page=8")
       .then((result: any) => {
         this.setState({
           characters: result.data.results,

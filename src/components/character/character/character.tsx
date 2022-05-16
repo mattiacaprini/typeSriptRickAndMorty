@@ -1,6 +1,4 @@
-import { idText } from "typescript";
-import "./character.css";
-
+import "./character.scss";
 interface CharacterProps {
   image: string;
   name: string;

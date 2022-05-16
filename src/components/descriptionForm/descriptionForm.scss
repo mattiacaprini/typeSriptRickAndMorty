@@ -1,0 +1,47 @@
+$ombreggiatura: rgb(0 0 0 / 10%) 10px 10px 15px -1px, rgba(224, 204, 204, 0.06) 0px 1px 5px -1px; ;
+$distanze: 1rem;
+$percentualePiena: 100%;
+
+.containerDescription{
+    color: rgb(245, 245, 245);
+    flex: 1;
+    padding: $distanze;
+}
+
+.containerForm{
+    background-color: rgb(32, 35, 41);
+    align-items: center;
+    display: flex;
+    padding: $distanze * 3;
+    width: $distanze * 45;
+    margin: auto;
+    border-radius: $distanze * 0.5;
+    box-shadow: $ombreggiatura;
+}
+
+.containerDescription h2{
+    margin: $distanze;
+    margin-left: $distanze * 2;
+    display: flex;
+    justify-content: center;
+    box-shadow: $ombreggiatura;
+
+}
+
+.imgCharacterSpecific{
+    width: percentualePiena;
+    height: percentualePiena;
+    border-radius: $distanze * 0.5;
+    box-shadow: $ombreggiatura;
+}
+
+.contImg{   
+    width: $distanze;
+    height: $distanze;
+    margin-left: $distanze * 0.5;
+}
+
+.AoDoUoMoF{
+    width: $percentualePiena;
+    height: $percentualePiena;
+}
